@@ -54,8 +54,8 @@
   "dependencies": {
     "@clerk/elements": "0.19.3",
     "@clerk/localizations": "3.6.4",
-    "@clerk/shared": "2.14.0",
-    "@clerk/types": "4.34.0",
+    "@clerk/shared": "workspace:*",
+    "@clerk/types": "workspace:*",
     "@formkit/auto-animate": "^0.8.2",
     "@radix-ui/react-slot": "^1.1.0",
     "clsx": "^2.0.0",

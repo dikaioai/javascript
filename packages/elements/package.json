@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "5.15.5",
-    "@clerk/shared": "2.14.0",
+    "@clerk/shared": "workspace:*",
     "@clerk/types": "^4.34.0",
     "@radix-ui/primitive": "^1.1.0",
     "@radix-ui/react-form": "^0.1.0",
