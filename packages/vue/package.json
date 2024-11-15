@@ -29,6 +29,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./internal": {
+      "types": "./dist/internal.d.ts",
+      "import": "./dist/internal.js"
     }
   },
   "main": "./dist/index.js",
@@ -38,8 +42,9 @@
   ],
   "scripts": {
     "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint src/",
-    "lint:attw": "attw --pack . --ignore-rules cjs-resolves-to-esm",
+    "lint:attw": "attw --pack . --ignore-rules no-resolution cjs-resolves-to-esm",
     "lint:publint": "publint",
     "publish:local": "pnpm dlx yalc push --replace --sig",
     "test": "vitest",
