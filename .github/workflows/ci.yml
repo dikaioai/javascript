@@ -215,12 +215,12 @@ jobs:
       - name: Install @clerk/backend in /integration
         if: ${{ steps.task-status.outputs.affected == '1' }}
         working-directory: ./integration
-        run: pnpm init && pnpm add @clerk/backend
+        run: pnpm init && pnpm add @clerk/backend --no-save-workspace
 
       - name: Install @clerk/clerk-js in os temp
         if: ${{ steps.task-status.outputs.affected == '1' }}
         working-directory: ${{runner.temp}}
-        run: mkdir clerk-js && cd clerk-js && pnpm init && pnpm add @clerk/clerk-js
+        run: mkdir clerk-js && cd clerk-js && pnpm init && pnpm add @clerk/clerk-js --no-save-workspace
 
       - name: Copy components @clerk/astro
         if: ${{ matrix.test-name == 'astro' }}
