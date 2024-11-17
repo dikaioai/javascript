@@ -121,7 +121,7 @@ runs:
       if: inputs.playwright-enabled == 'true'
       shell: bash
       id: playwright-version
-      run: echo "VERSION=$(node -e "console.log($(npm ls @playwright/test --json).dependencies['@playwright/test'].version)")" >> "$GITHUB_OUTPUT"
+      run: echo "VERSION=$(node -e "node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
 
     - name: Cache Playwright Binaries
       if: inputs.playwright-enabled == 'true'
